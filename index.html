@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style src="index.js">
+        
+    </style>
+</head>
+
+<body>
+<header>
+    <h1 class="heading"> Welcome</h1>
+    <h1 class="title"> Sliding login and signup form</h1>
+   
+</header>
+
+   <!-- buttons for login and signup  -->
+   <div class="container">
+   <div class="slider"></div>
+    <div class="btn">
+        <button class="login">Login</button>
+        <button class="signup">SignUp</button>
+    </div>
+
+    <!-- login form  -->
+    <div class="form-section">
+     <div class="login-box">
+      <h2>Email : <input type="Email" placeholder="abc@gmail.com" class="email ele"> </h2>
+      <h2>Password :<input type="Password" placeholder="Enter your password" class="pwdd ele"></h2>
+      <h3><button class="clkbtn">Login </button></h3>
+    </div>
+    
+    <!-- div for signup form  -->
+    <div class="signup-box">
+       <h2>Name : <input type="text" placeholder="Enter your name" class="name ele"></h2>
+        <h2>Contact number : <input type="number" placeholder="Enter your phone number" class="num ele"></h2>
+        <h2> Email : <input type="email" placeholder="abc@gmail.com" class="email ele"></h2>
+       </div>
+   </div>
+   </div>
+</body>
+</html>
+
+
+<script>
+    
+let signup = document.querySelector(".signup");
+let login = document.querySelector(".login");
+let slider = document.querySelector(".slider");
+let formSection = document.querySelector(".form-section");
+ 
+signup.addEventListener("click", () => {
+    slider.classList.add("moveslider");
+    formSection.classList.add("form-section-move");
+});
+ 
+login.addEventListener("click", () => {
+    slider.classList.remove("moveslider");
+    formSection.classList.remove("form-section-move");
+});
+</script>
